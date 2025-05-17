@@ -1,0 +1,180 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 450px;
+    min-width: 250px;
+    max-width: 100%;
+    width: 650px;
+    box-shadow: 1px 1px 50px ;
+    border-radius: 20px;
+}
+
+.left {
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left .points {
+    font-size: 1.7rem;
+    font-weight: 700;
+    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1) 0%, hsla(256, 72%, 46%, 0) 100%);
+    border-radius: 50%;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#of100 {
+    color: hsl(241, 100%, 89%);
+    font-size: 15px;
+}
+
+.your-result {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(241, 100%, 89%);
+}
+
+.description > p {
+    padding: 10px;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 18px;
+    color: hsl(241, 100%, 89%);
+}
+
+.right  {
+    background-color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: space-between;
+
+}
+
+.summary {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: hsl(224, 30%, 27%);
+    text-align: start;
+    margin-bottom: 1.5rem;
+}	
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.stat span img {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.stat > span,
+.stat > p {
+    margin: 0;
+    padding: 0;
+}
+
+.stat > p {
+    align-self: center;
+}
+
+.stat > p:last-child {
+    margin-left: auto;
+}
+
+#reaction {
+    color: hsl(0, 100%, 67%);
+    font-weight: bold;
+}
+
+#memory {
+    color: hsl(39, 100%, 56%);
+    font-weight: bold;
+}
+
+#verbal {
+    color: hsl(166, 100%, 37%);
+    font-weight: bold;
+}
+
+#visual {
+    color: hsl(234, 85%, 45%);
+    font-weight: bold;
+}
+
+#score {
+    color: hsl(224, 30%, 27%);
+    font-weight: bold;
+}
+
+.continue-btn {
+    background: linear-gradient(to bottom, hsl(224, 30%, 27%) 0%, hsl(224, 30%, 27%) 100%);
+    border-radius: 50px;
+    padding: 20px;
+    margin-top: 30px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.5s ease-in-out;
+
+}
+
+.continue-btn:hover {
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+}
+
+@media (max-width: 700px) {
+    .card {
+        grid-template-columns: 1fr;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+    }
+
+    .left {
+        height: 100%;
+
+    }
+}
